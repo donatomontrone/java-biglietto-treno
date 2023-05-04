@@ -20,15 +20,15 @@ public class CalcolaBiglietto {
 		
 		if (userAge > 0 && userAge < 105) {
 			if(userAge < 18) {
-				float result =(float) ( ticketPrice - (ticketPrice * 0.2));
-				System.out.println("Essendo minorenne hai diritto ad uno sconto del 20% quindi il tuo biglietto costa " + result + "euro, invece che " + ticketPrice + "euro");
+				float result = ( ticketPrice - (ticketPrice * 0.2f));
+				System.out.println("Essendo minorenne hai diritto ad uno sconto del 20% quindi il tuo biglietto costa " + String.format("%.2f", result) + "€, invece che " + String.format("%.2f", ticketPrice) + "€");
 			} else if(userAge > 65) {
-				float result = (float) ( ticketPrice - (ticketPrice * 0.4));
-				System.out.println("Essendo over65 hai diritto ad uno sconto del 40% quindi il tuo biglietto costa " + result + "euro, invece che " + ticketPrice + "euro");
+				float result = ( ticketPrice - (ticketPrice * 0.4f));
+				System.out.println("Essendo over65 hai diritto ad uno sconto del 40% quindi il tuo biglietto costa " + String.format("%.2f", result) + "€, invece che " + String.format("%.2f", ticketPrice) + "€");
 
 			} else {
 				float result = (userKm * ticketPrice);
-				System.out.println("Il tuo biglietto costa " + result + "euro");
+				System.out.println("Il tuo biglietto costa " + String.format("%.2f", result) + "€");
 			}
 		}
 		
